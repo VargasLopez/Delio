@@ -1,9 +1,7 @@
 /* Tailwind CSS standard directives (handled by CDN in buildless mode) */
-/*
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*/
 
 /* Custom Base Layer Styling */
 @layer base {
