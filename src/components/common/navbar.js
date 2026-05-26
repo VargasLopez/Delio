@@ -8,7 +8,7 @@ export class AppNavbar {
     const headerHtml = `
       <header class="bg-white sticky top-0 z-40 border-b border-slate-200 px-4 py-3 flex items-center justify-between safe-top shadow-sm">
         <div class="flex items-center gap-2 cursor-pointer" id="nav-logo-btn">
-          <img src="/logo.png" alt="Delio Logo" class="h-8 w-auto object-contain drop-shadow-sm">
+          <img src="./logo.png" alt="Delio Logo" class="h-8 w-auto object-contain drop-shadow-sm">
           <span class="text-[9px] font-bold text-brand-700 bg-brand-100 px-1.5 py-0.5 rounded border border-brand-200">MÉXICO</span>
         </div>
         

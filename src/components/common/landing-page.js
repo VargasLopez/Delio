@@ -9,7 +9,7 @@ export class LandingPage {
         <!-- Header Bar -->
         <header class="bg-white border-b border-slate-200 sticky top-0 z-50 px-4 py-3 flex items-center justify-between shadow-sm">
           <div class="flex items-center gap-2">
-            <img src="/logo.png" alt="Delio Logo" class="h-8 w-auto object-contain drop-shadow-sm">
+            <img src="./logo.png" alt="Delio Logo" class="h-8 w-auto object-contain drop-shadow-sm">
           </div>
           <div class="flex gap-2">
             <a href="#/auth" class="px-3.5 py-1.5 rounded-xl border-2 border-slate-300 text-slate-700 hover:text-slate-900 hover:border-slate-500 font-extrabold text-xs transition-all shadow-sm">
