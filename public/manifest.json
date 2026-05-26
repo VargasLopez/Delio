@@ -1,0 +1,25 @@
+{
+  "name": "Delio - Mandados y Oficios P2P",
+  "short_name": "Delio",
+  "description": "Directorio independiente peer-to-peer de mandados y oficios locales en México. Sin comisiones.",
+  "start_url": "/#/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0d9488",
+  "orientation": "portrait-primary",
+  "categories": ["business", "social", "utilities"],
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
