@@ -90,9 +90,6 @@ export const AuthService = {
     }
   },
 
-  /**
-   * Fetches profile details for a given user ID.
-   */
   async getProfile(userId) {
     try {
       const { data, error } = await supabase
@@ -101,7 +98,32 @@ export const AuthService = {
         .eq('id', userId)
         .single();
       
-      if (error) throw error;
+      if (error) {
+        // Fallback: If no profile exists (e.g. registration was interrupted or DB was resetting), auto-repair it
+        const { data: authData } = await supabase.auth.getUser();
+        const user = authData?.user;
+        
+        if (user && user.id === userId) {
+          console.warn("[AuthService] Profile missing. Attempting auto-repair...");
+          const newProfile = {
+            id: user.id,
+            email: user.email,
+            full_name: user.user_metadata?.full_name || user.email.split('@')[0],
+            phone: user.user_metadata?.phone || '',
+            state: user.user_metadata?.state || '',
+            municipality: user.user_metadata?.municipality || '',
+            colonia: user.user_metadata?.colonia || '',
+            preferred_payment_methods: user.user_metadata?.preferred_payment_methods || ['cash'],
+            is_ine_verified: false
+          };
+          
+          const { data: createdData, error: insertError } = await supabase.from('profiles').insert(newProfile).select().single();
+          if (!insertError && createdData) {
+            return createdData;
+          }
+        }
+        throw error;
+      }
       return data;
     } catch (err) {
       console.error(`[AuthService] Error fetching profile ${userId}:`, err);
