@@ -135,7 +135,7 @@ export class LandingPage {
                 <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 transition-transform"></i>
               </button>
               <div id="cookies-content" class="accordion-content hidden px-4 pb-4 pt-1 border-t border-slate-100 text-[11px] text-slate-700 leading-relaxed font-semibold space-y-2">
-                <p>1. <strong>Uso de Cookies Técnicas</strong>: Delio utiliza únicamente cookies y almacenamiento local técnico estrictamente necesario (localStorage y sessionStorage) para mantener iniciada tu sesión de forma segura y almacenar tu base de datos de simulación local en modo demo.</p>
+                <p>1. <strong>Uso de Cookies Técnicas</strong>: Delio utiliza únicamente cookies y almacenamiento local técnico estrictamente necesario (localStorage y sessionStorage) para mantener iniciada tu sesión de forma segura.</p>
                 <p>2. <strong>Ausencia de Rastreadores Comerciales</strong>: No integramos píxeles de rastreo de redes sociales, cookies publicitarias de terceros, ni scripts de analíticas comerciales invasivos. Tu navegación y búsquedas locales son 100% privadas.</p>
               </div>
             </div>
